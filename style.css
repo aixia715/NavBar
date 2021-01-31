@@ -4,8 +4,8 @@
 }
 
 .nav {
-    height: 40px;  /*头部高度设置为40像素*/
-    padding: 12px 0;  /*设定内容的垂直位置*/
+    height: 40px; /*头部高度设置为40像素*/
+    padding: 12px 0; /*设定内容的垂直位置*/
     font-size: 14px;
     box-sizing: border-box;
     background-color: #f7f7f7;
@@ -29,10 +29,9 @@
 }
 
 .nav-ul li a {
-    text-decoration: none;  /*清除下划线*/
+    text-decoration: none; /*清除下划线*/
     color: #333;
 }
-
 
 .nav-ul li::after {
     /*通过after伪元素绘制分割线，分割线本质是一个1像素框的区域，通过给定背景色使其可见*/
@@ -47,5 +46,6 @@
 }
 
 .nav-ul li:last-child::after {
+    /*last-child伪元素表示在一组兄弟元素当中，最后一个元素，因为是兄弟元素，所以这里是li:last-child，不是ul:last-child*/
     display: none; /*不显示最后一个li的分隔符*/
 }

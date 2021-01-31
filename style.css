@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    height: 40px;  /*头部高度设置为40像素*/
+    padding: 12px 0;  /*设定内容的垂直位置*/
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+
+.nb {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-ul {
+    float: right;
+}
+
+.nav-ul li {
+    display: inline-block; /*变成行内块元素*/
+    position: relative; /*“父相子绝”的位置设定，使子元素的定位是相对于父元素*/
+    float: left; /*消除两个li之间的空格，这个空格是由HTML当中li是分行书写带来的*/
+    padding: 0 18px;
+    line-height: 16px;
+}
+
+.nav-ul li a {
+    text-decoration: none;  /*清除下划线*/
+    color: #333;
+}
+
+
+.nav-ul li::after {
+    /*通过after伪元素绘制分割线，分割线本质是一个1像素框的区域，通过给定背景色使其可见*/
+    display: block;
+    content: ''; /*after伪元素区域中显示的字符，这里设置为空*/
+    position: absolute; /*“父相子绝”的位置设定，使子元素的定位是相对于父元素*/
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 16px;
+    background-color: #e2e2e2;
+}
+
+.nav-ul li:last-child::after {
+    display: none; /*不显示最后一个li的分隔符*/
+}
